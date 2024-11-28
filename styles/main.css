@@ -1,0 +1,134 @@
+:root {
+    --main-bg-clr: #192a32;
+    --modal-bg-clr: #0c1319;
+    --board-bg-clr: #1f3540;
+    --cyan: #31c4be;
+    --yellow: #f2b237;
+    --off-white: #a8bec9;
+
+}
+
+body {
+    background-color: var(--main-bg-clr);
+}
+
+.container-sm {
+    max-width: 380px;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.players>svg:nth-child(1) {
+    fill: var(--cyan);
+}
+
+.players>svg:nth-child(2) {
+    fill: var(--yellow);
+}
+
+.turn {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px 4px 0px;
+    padding: .4rem 1.4rem;
+    color: var(--off-white);
+    background-color: var(--board-bg-clr);
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
+.turn>.icon {
+    fill: var(--off-white);
+    width: 1rem;
+}
+
+header>button {
+    border: none;
+    background-color: var(--off-white);
+    cursor: pointer;
+    width: 2.5rem !important;
+    height: 2.5rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(97, 149, 175, 0.8) 0px 4px 0px;
+
+}
+
+header>button>.icon {
+    width: .8rem;
+    fill: var(--main-bg-clr);
+}
+
+.board_item {
+    background-color: var(--board-bg-clr);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px, rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px 8px 0px;
+    cursor: pointer;
+}
+
+.score_item-o,
+.score_item-x,
+.score_item-ties {
+    font-size: .6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.score_item-x {
+    background-color: var(--cyan);
+}
+
+.score_item-ties {
+    background-color: var(--off-white);
+}
+
+.score_item-o {
+    background-color: var(--yellow);
+}
+
+.score {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+
+.board_item {
+    aspect-ratio: 1/1;
+}
+
+.icon.cross {
+    fill: var(--cyan);
+    height: 40%;
+    width: 40%;
+}
+
+.icon.circle {
+    fill: var(--yellow);
+    height: 50%;
+    width: 50%;
+}
+
+.modal-content {
+    background-color: var(--board-bg-clr);
+    border-radius: 0;
+}
+
+.modal-content .winner {
+    fill: var(--cyan);
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.modal-action>button:nth-child(1) {
+    background-color: var(--off-white);
+    font-size: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 4px, rgba(0, 0, 0, 0.7) 0px 0px 0px -3px, rgb(168, 190, 201, .5) 0px 3px 0px;
+}
+
+.modal-action>button:nth-child(2) {
+    background-color: var(--yellow);
+    font-size: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px, rgba(0, 0, 0, 0.5) 0px 0px 0px -2px, rgb(254, 180, 43, .5) 0px 3px 0px;
+
+}
