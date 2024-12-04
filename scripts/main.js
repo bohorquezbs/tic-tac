@@ -1,6 +1,6 @@
 // Variables globales
 let board = ['', '', '', '', '', '', '', '', '']; // Representa el tablero
-let currentPlayer = 'X'; // Jugador actual
+let currentPlayer = 'x'; // Jugador actual
 let isGameActive = true; // Estado del juego
 let scoreX = 0;
 let scoreO = 0;
@@ -15,7 +15,7 @@ const scoreTiesDisplay = document.querySelector('.score_item-ties .score');
 const modal = document.querySelector('.modal');
 const winnerIcon = document.querySelector('#winner');
 const restartButton = document.getElementById('restart');
-
+const quit = document.querySelectorAll('.btn')
 // Función para manejar el clic en una casilla
 function handleCellClick(index) {
     if (board[index] === '' && isGameActive) {
@@ -87,19 +87,50 @@ function showTie() {
 
 // Función para cambiar de jugador
 function switchPlayer() {
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    currentPlayer = currentPlayer === 'x' ? 'o' : 'x';
     turnDisplay.textContent = currentPlayer;
 }
 
 // Función para reiniciar el juego
 function restartGame() {
     board = ['', '', '', '', '', '', '', '', ''];
-    currentPlayer = 'X';
+    currentPlayer = 'x';
     isGameActive = true;
     renderBoard();
     modal.classList.add('d-none');
-}
 
+}
+restartGame()
+function cero() {
+    scoreXDisplay.innerHTML = ""
+    board.forEach((element) => {
+        const scoreX = `
+          <span class="score">${element}</span>
+            `
+        scoreXDisplay.innerHTML += scoreX
+    })
+}
+cero()
+function score() {
+    scoreTiesDisplay.innerHTML = ""
+    board.forEach((element) => {
+        const scoreTies = `
+          <span class="score">${element}</span>
+            `
+        scoreTiesDisplay.innerHTML += scoreTies
+    })
+}
+score()
+function scoreDisplay() {
+    scoreODisplay.innerHTML = ""
+    board.forEach((element) => {
+        const score0 = `
+          <span class="score">${element}</span>
+            `
+        scoreODisplay.innerHTML += score0
+    })
+}
+scoreDisplay()
 // Event listeners para las casillas
 boardItems.forEach((item, index) => {
     item.addEventListener('click', () => handleCellClick(index));
@@ -107,3 +138,4 @@ boardItems.forEach((item, index) => {
 
 // Event listener para el botón de reinicio
 restartButton.addEventListener('click', restartGame);
+

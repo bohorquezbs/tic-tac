@@ -97,13 +97,24 @@ header>button>.icon {
     aspect-ratio: 1/1;
 }
 
-.icon.cross {
+.icon.x {
     fill: var(--cyan);
     height: 40%;
     width: 40%;
 }
 
-.icon.circle {
+/* .icon.cross {
+    fill: var(--cyan);
+    height: 40%;
+    width: 40%;
+}
+ */
+ /* .icon.circle {
+    fill: var(--yellow);
+    height: 50%;
+    width: 50%;
+} */
+.icon.o {
     fill: var(--yellow);
     height: 50%;
     width: 50%;
